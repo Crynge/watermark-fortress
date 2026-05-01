@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "watermark-fortress"
+version = "0.1.0"
+description = "Adaptive, self-healing watermarking system with a red-team lab and benchmark dashboard."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Sameer Alam", email = "113900807+Crynge@users.noreply.github.com" }
+]
+dependencies = [
+  "fastapi>=0.116,<1.0",
+  "uvicorn>=0.35,<1.0",
+  "pydantic>=2.11,<3.0",
+  "reportlab>=4.4,<5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.28,<1.0",
+  "pytest>=8.4,<9.0",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]

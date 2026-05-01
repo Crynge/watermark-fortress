@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Source+Serif+4:wght@400;500;600&display=swap");
+
+:root {
+  --bg: #07131b;
+  --panel: rgba(8, 21, 31, 0.88);
+  --panel-border: rgba(128, 198, 214, 0.18);
+  --text: #eef4f6;
+  --soft: #9fb4bc;
+  --teal: #6ed9cf;
+  --ice: #a7d5ff;
+  --amber: #f6c374;
+  --copper: #ef8b59;
+  --emerald: #92e3a4;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(110, 217, 207, 0.16), transparent 24%),
+    radial-gradient(circle at bottom right, rgba(239, 139, 89, 0.15), transparent 26%),
+    linear-gradient(180deg, #07131b 0%, #040b11 100%);
+  color: var(--text);
+  font-family: "Source Serif 4", serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.86), transparent 92%);
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+.shell {
+  width: min(1540px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 30px 0 48px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-end;
+  margin-bottom: 22px;
+}
+
+.eyebrow,
+.hero-chip,
+.section-header span,
+.attack-pill {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-size: 0.78rem;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: clamp(3.4rem, 6vw, 6rem);
+  line-height: 0.92;
+}
+
+.hero-body,
+.panel-copy {
+  color: var(--soft);
+  line-height: 1.8;
+}
+
+.hero-stats {
+  display: grid;
+  gap: 12px;
+}
+
+.hero-chip {
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.84rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(320px, 0.95fr);
+  gap: 20px;
+}
+
+.main-column,
+.rail {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.panel {
+  border-radius: 28px;
+  padding: 18px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.section-header,
+.trace-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.section-header {
+  margin-bottom: 14px;
+}
+
+.section-header span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 0.78rem;
+}
+
+.section-header strong,
+.battle-card strong,
+.verdict-card strong,
+.matrix-card strong,
+.case-card strong {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.metrics-grid,
+.weights-grid,
+.battle-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.metrics-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 16px;
+}
+
+.weights-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.metric-card,
+.weight-card,
+.battle-card,
+.verdict-card,
+.matrix-card,
+.case-card {
+  border-radius: 20px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.metric-card span,
+.battle-card span {
+  display: block;
+  color: var(--soft);
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.metric-card strong {
+  font-size: 1.8rem;
+}
+
+.metric-copper {
+  box-shadow: inset 0 0 0 1px rgba(239, 139, 89, 0.18);
+}
+
+.metric-emerald {
+  box-shadow: inset 0 0 0 1px rgba(146, 227, 164, 0.18);
+}
+
+.metric-ice {
+  box-shadow: inset 0 0 0 1px rgba(167, 213, 255, 0.18);
+}
+
+.metric-amber {
+  box-shadow: inset 0 0 0 1px rgba(246, 195, 116, 0.18);
+}
+
+.bar-shell {
+  margin-top: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--teal), var(--amber));
+}
+
+.battle-controls {
+  display: grid;
+  gap: 14px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 180px;
+  resize: vertical;
+  border-radius: 22px;
+  padding: 16px;
+  background: #0a1822;
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  outline: none;
+}
+
+.attack-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.attack-pill,
+.primary-action {
+  border: none;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.attack-pill {
+  border-radius: 999px;
+  padding: 10px 14px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.attack-pill-active {
+  background: linear-gradient(135deg, rgba(110, 217, 207, 0.16), rgba(246, 195, 116, 0.18));
+}
+
+.primary-action {
+  border-radius: 22px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, var(--teal), var(--amber));
+  color: #051116;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+}
+
+.primary-action:hover,
+.attack-pill:hover {
+  transform: translateY(-1px);
+}
+
+.battle-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 16px;
+}
+
+.battle-card p,
+.verdict-card p,
+.matrix-card small,
+.case-card small {
+  margin: 0;
+  color: var(--soft);
+  line-height: 1.65;
+}
+
+.verdict-stack,
+.matrix-list,
+.case-list {
+  display: grid;
+  gap: 12px;
+}
+
+.error-banner {
+  margin-bottom: 18px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(239, 139, 89, 0.28);
+  background: rgba(239, 139, 89, 0.12);
+  color: #ffd9c9;
+}
+
+.compact-bar {
+  margin-top: 8px;
+}
+
+@media (max-width: 1200px) {
+  .grid,
+  .metrics-grid,
+  .weights-grid,
+  .battle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

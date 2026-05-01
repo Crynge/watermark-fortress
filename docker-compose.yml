@@ -1,0 +1,17 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    ports:
+      - "8011:8011"
+    command: ["python", "serve_api.py", "--host", "0.0.0.0", "--port", "8011"]
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    ports:
+      - "4174:4174"
+    depends_on:
+      - api

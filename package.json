@@ -1,0 +1,14 @@
+{
+  "name": "watermark-fortress",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "install:web": "npm install --workspace apps/web",
+    "lint:web": "npm run lint --workspace apps/web",
+    "build:web": "npm run build --workspace apps/web",
+    "audit": "python -m pytest tests -q && npm run lint:web && npm run build:web"
+  }
+}
