@@ -1,5 +1,17 @@
 # Watermark Fortress
 
+<!-- portfolio-seo:start -->
+![Stars](https://img.shields.io/github/stars/Crynge/watermark-fortress?style=flat-square) ![License](https://img.shields.io/github/license/Crynge/watermark-fortress?style=flat-square) ![Status](https://img.shields.io/badge/status-active-blue?style=flat-square)
+
+![Social Preview](docs/social-preview.png)
+
+> Adaptive watermarking benchmark and dashboard for measuring AI text robustness under adversarial rewriting.
+
+**GitHub Search Keywords:** ai watermarking, watermark benchmark, adversarial rewrite detection, text watermarking, ai safety benchmark, watermark dashboard
+
+<!-- portfolio-seo:end -->
+
+
 Adaptive, self-healing watermarking for AI-generated text, with an embedded red-team attack lab, benchmark sweep engine, PDF reporting pipeline, and a forensic operations dashboard.
 
 ## Why this repo exists
@@ -15,7 +27,7 @@ This repo turns that premise into a working open-source system:
 - **Adversary lab** with deterministic rewrite attacks
 - **Benchmark sweep** that compares adaptive recovery against a static baseline
 - **FastAPI control plane** for battle simulation and reporting
-- **React dashboard** for live “before / after / healed” inspection
+- **React dashboard** for live "before / after / healed" inspection
 - **PDF report generation** for reproducible evaluation artifacts
 
 ## Screenshots
@@ -162,7 +174,7 @@ This repo is inspired by recent watermark-robustness work and the measurable fai
 
 ## Scope note
 
-This is a serious engineering starter, not a claim that watermarking is “solved.” The repo explicitly assumes:
+This is a serious engineering starter, not a claim that watermarking is "solved." The repo explicitly assumes:
 
 - every fixed watermark can still be pressured by stronger attackers
 - robustness is a moving systems problem, not a one-shot theorem
